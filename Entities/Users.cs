@@ -1,9 +1,16 @@
-namespace API.Entities {
-  public class User {
+namespace API.Entities
+{
+  public class User
+  {
     public int Id { get; set; }
     public string Username { get; set; }
 
-    User(){
+    public byte[] PasswordHash { get; set; }
+
+    public byte[] PasswordSalt { get; set; }
+
+    public User()
+    {
       Id = 0;
       Username = "";
     }
